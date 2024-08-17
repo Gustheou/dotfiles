@@ -70,18 +70,23 @@ white = '#d3c6aa'
 size = 10
 
 [font.normal]
-family = "monospace"
+#family = "monospace"
+family = "CozetteVector"
 style = "Regular"
 
 [font.bold]
-family = "monospace"
+#family = "cozette"
+family = "CozetteVector"
+#family = "monospace"
 style = "Bold"
 
 [font.italic]
+#family = "cozette"
 family = "monospace"
 style = "Italic"
 
 [font.bold_italic]
+#family = "cozette"
 family = "monospace"
 style = "Bold Italic"
 
