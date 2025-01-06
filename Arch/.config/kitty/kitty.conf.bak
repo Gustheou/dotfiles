@@ -1,0 +1,41 @@
+#font_family         Iosevka Nerd Font Mono
+# font_family         Hack Nerd Font
+#font_family          GohuFont Nerd Font
+# bold_font           auto
+# italic_font         auto
+# bold_italic_font    auto
+font_size           12
+
+window_padding_width 16
+confirm_os_window_close 0
+
+#include ./theme.conf
+
+detect_urls yes
+url_color #0087bd
+url_style curly
+open_url_with default
+
+scrollback_lines 1500
+wheel_scroll_multiplier 10.0
+
+background_opacity 0.75
+background_blur 64
+background #001B21
+#hide_window_decorations yes
+sync_to_monitor yes
+
+
+clipboard_control write-clipboard write-primary read-clipboard-ask read-primary-ask
+
+input_delay 1
+
+
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="GohuFont uni14 Nerd Font"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
