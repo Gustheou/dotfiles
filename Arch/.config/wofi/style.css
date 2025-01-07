@@ -1,0 +1,68 @@
+@define-color background rgba(0,27,33,0.75);
+
+window {
+  font-size: 14px;
+  font-family: "GohuFont 14 Nerd Font";
+  background-color: @background;
+  color: white;
+  border: 2px solid cyan; 
+  padding: 10px;
+  margin: 0px;
+}
+
+#entry {
+  padding: 0.5em;
+}
+
+#entry:selected {
+  background-color: #0087bd;
+  color: white;
+  background: linear-gradient(45deg, rgba(33ccff33), rgba(00ff99ee));
+  border: 0.11em solid cyan
+}
+
+#text:selected {
+  color: white;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  color: white;
+}
+
+#input {
+  background-color: @background;
+  color: white;
+  margin: 5px 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 0.1em;
+}
+
+#input image {
+    border: none;
+    color: white;
+}
+
+/* Inner Box */
+#inner-box {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+}
+
+/* Outer Box */
+#outer-box {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+}
+
+#scroll {
+  margin: 0px;
+  padding: 10px;
+  border: none;
+  background-color: @background;
+}
+
