@@ -9,6 +9,7 @@ sudo systemctl enable --now ufw.service;
 
 flatpak install flathub com.github.d4nj1.tlpui com.discordapp.Discord md.obsidian.Obsidian org.localsend.localsend_app page.codeberg.JakobDev.jdMinecraftLauncher org.nickvision.tubeconverter flathub net.nokyan.Resources;
 
+cd $HOME/;
 git clone https://aur.archlinux.org/yay.git;
 cd yay;
 makepkg -si;
@@ -17,7 +18,6 @@ yay -S ttf-ms-fonts visual-studio-code-bin;
 
 curl -f https://zed.dev/install.sh | sh;
 sh -c "$(curl -fsSL https://install.ohmyz.sh/)";
-
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting;
