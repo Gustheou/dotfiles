@@ -3,6 +3,9 @@ sudo dnf install fastfetch zsh neovim bat alacritty xed;
 sudo dnf install git;
 sudo dnf install gh;
 
+sudo dnf install curl cabextract xorg-x11-font-utils fontconfig;
+sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm;
+
 sh -c "$(curl -fsSL https://install.ohmyz.sh/)";
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
