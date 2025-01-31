@@ -13,13 +13,18 @@ sudo pacman -Syu;
 sudo pacman -S wofi waybar pavucontrol brightnessctl ttf-jetbrains-mono-nerd hyprpaper hypridle hyprlock cliphist wl-clipboard hyprland xdg-desktop-portal xdg-desktop-portal-hyprland dolphin kitty;
 
 # System essential packages
-sudo pacman -S fastfetch flatpak firefox dunst man polkit-kde-agent grim slurp ufw tlp ttf-dejavu noto-fonts noto-fonts-emoji ttf-liberation gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer kvantum kvantum-qt5 qt5ct qt6ct nwg-look kwrite archlinux-xdg-menu ristretto libreoffice gnome-disk-utility okular galculator;
+sudo pacman -S fastfetch flatpak firefox dunst man polkit-kde-agent grim slurp ufw tlp ttf-dejavu noto-fonts noto-fonts-emoji ttf-liberation gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer kvantum kvantum-qt5 qt5ct qt6ct nwg-look kwrite archlinux-xdg-menu ristretto libreoffice gnome-disk-utility okular galculator blueman bluez bluez-utils;
+
+# Enable bluetooth service
+sudo systemctl enable bluetooth.service;
+sudo systemctl start bluetooth.service;
 
 #If you use intel, uncomment this line below:
 #sudo pacman -S intel-ucode;
 #If you use AMD, uncomment this line below:
 #sudo pacman -S amd-ucode;
 
+# Enable firewall
 sudo systemctl enable --now ufw.service;
 
 # Preference packages
