@@ -39,6 +39,7 @@ cd yay;
 makepkg -si;
 cd ..;
 yay -S ttf-ms-fonts visual-studio-code-bin;
+yay -S newsflash;
 
 # Zed installer
 curl -f https://zed.dev/install.sh | sh;
