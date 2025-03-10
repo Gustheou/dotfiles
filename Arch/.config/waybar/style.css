@@ -59,8 +59,10 @@ window#waybar {
 }
 
 #workspaces button.active {
-    border-bottom: 2px solid white;
-    border-radius: 10;
+    border: 1px solid white;
+    background: white;
+    color: black;
+    border-radius: 10
   }
 
 #mode {
@@ -90,7 +92,7 @@ window#waybar {
 @keyframes blink {
     to {
         background-color: #ffffff;
-        color: black;
+        color: red;
     }
 }
 

@@ -16,12 +16,9 @@ sudo pacman -S wofi waybar pavucontrol brightnessctl hyprpaper hypridle hyprlock
 sudo pacman -S ttf-jetbrains-mono-nerd ttf-dejavu noto-fonts noto-fonts-emoji ttf-liberation;
 
 # Essentials packages (for me)
-sudo pacman -S fastfetch flatpak firefox dunst man polkit-kde-agent grim slurp ufw tlp gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer kvantum kvantum-qt5 qt5ct qt6ct nwg-look archlinux-xdg-menu ristretto okular galculator blueman bluez bluez-utils ldns yazi zsh bat tldr github-cli libreoffice gnome-disk-utility;
+sudo pacman -S fastfetch flatpak firefox dunst man polkit-kde-agent grim slurp ufw tlp gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer kvantum kvantum-qt5 qt5ct qt6ct nwg-look archlinux-xdg-menu ristretto okular galculator blueman bluez bluez-utils ldns yazi zsh bat tldr github-cli libreoffice gnome-disk-utility mpv zip unzip p7zip unrar tar gzip arc-gtk-theme keepassxc obsidian steam qbittorrent chromium ncdu;
 
-# Preference packages
-sudo pacman -S keepassxc obsidian steam qbittorrent chromium kwrite;
-
-flatpak install flathub com.github.d4nj1.tlpui com.discordapp.Discord md.obsidian.Obsidian org.localsend.localsend_app page.codeberg.JakobDev.jdMinecraftLauncher org.nickvision.tubeconverter flathub net.nokyan.Resources;
+flatpak install flathub com.github.d4nj1.tlpui com.discordapp.Discord org.localsend.localsend_app page.codeberg.JakobDev.jdMinecraftLauncher org.nickvision.tubeconverter flathub net.nokyan.Resources;
 
 
 # Enable bluetooth service
@@ -29,7 +26,7 @@ sudo systemctl enable bluetooth.service;
 sudo systemctl start bluetooth.service;
 
 #If you use intel, uncomment this line below:
-#sudo pacman -S intel-ucode;
+sudo pacman -S intel-ucode;
 #If you use AMD, uncomment this line below:
 #sudo pacman -S amd-ucode;
 
@@ -44,9 +41,6 @@ makepkg -si;
 cd ..;
 
 yay -S ttf-ms-fonts visual-studio-code-bin newsflash;
-
-# Zed installer
-curl -f https://zed.dev/install.sh | sh;
 
 # OhMyZShell installer
 sh -c "$(curl -fsSL https://install.ohmyz.sh/)";
