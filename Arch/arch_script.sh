@@ -16,9 +16,9 @@ sudo pacman -S wofi waybar pavucontrol brightnessctl hyprpaper hypridle hyprlock
 sudo pacman -S ttf-jetbrains-mono-nerd ttf-dejavu noto-fonts noto-fonts-emoji ttf-liberation;
 
 # Essentials packages (for me)
-sudo pacman -S fastfetch flatpak firefox dunst man polkit-kde-agent grim slurp ufw tlp gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer kvantum kvantum-qt5 qt5ct qt6ct nwg-look archlinux-xdg-menu ristretto okular galculator blueman bluez bluez-utils ldns yazi zsh bat tldr github-cli libreoffice gnome-disk-utility mpv zip unzip p7zip unrar tar gzip arc-gtk-theme keepassxc obsidian steam qbittorrent chromium ncdu;
+sudo pacman -S fastfetch flatpak firefox dunst man polkit-kde-agent grim slurp ufw tlp gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer kvantum kvantum-qt5 qt5ct qt6ct nwg-look archlinux-xdg-menu ristretto okular galculator blueman bluez bluez-utils ldns yazi zsh bat tldr github-cli libreoffice gnome-disk-utility mpv zip unzip p7zip unrar tar gzip arc-gtk-theme keepassxc obsidian steam qbittorrent chromium ncdu discord;
 
-flatpak install flathub com.github.d4nj1.tlpui com.discordapp.Discord org.localsend.localsend_app page.codeberg.JakobDev.jdMinecraftLauncher org.nickvision.tubeconverter flathub net.nokyan.Resources;
+flatpak install flathub com.github.d4nj1.tlpui org.localsend.localsend_app page.codeberg.JakobDev.jdMinecraftLauncher org.nickvision.tubeconverter flathub net.nokyan.Resources;
 
 
 # Enable bluetooth service
