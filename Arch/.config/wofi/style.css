@@ -6,7 +6,7 @@ window {
   font-family: "GohuFont 14 Nerd Font";
   background-color: @background;
   color: white;
-  border: 2px solid white; 
+  border: 2px solid cyan;
   padding: 10px;
   margin: 0px;
 }
