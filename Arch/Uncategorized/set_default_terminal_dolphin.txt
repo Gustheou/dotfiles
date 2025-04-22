@@ -1,0 +1,6 @@
+FILE:
+~/.config/kdeglobals
+
+INSERT:
+[General]
+TerminalApplication=kitty
