@@ -2,9 +2,10 @@
 # (THIS STEP IS OPTIONAL!!!)
 # GO TO PACMAN CONFIG FILE AND EDIT IT WITH YOUR PREFERED EDITOR, MINE IS NEOVIM: 
 #   sudo nvim /etc/pacman.conf
-# INSIDE THE TEXT, ENABLE 'ParallelDownloads = 10'
-# ENABLE 'Color'
-# INSERT A LINE 'ILoveCandy'
+# INSIDE THE TEXT, UNCOMMENT THE LINES: 
+#   'ParallelDownloads = 10'
+#   ENABLE 'Color'
+# AND INSERT A LINE 'ILoveCandy' FOR PACMAN ANIMATION
 
 # Update the system
 sudo pacman -Syu;
@@ -17,6 +18,8 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-dejavu noto-fonts noto-fonts-emoji tt
 
 # Essentials packages (for me)
 sudo pacman -S fastfetch flatpak firefox dunst man polkit-kde-agent grim slurp ufw tlp gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer kvantum kvantum-qt5 qt5ct qt6ct nwg-look archlinux-xdg-menu feh okular galculator blueman bluez bluez-utils ldns yazi bat github-cli libreoffice gnome-disk-utility mpv zip unzip p7zip unrar tar gzip keepassxc obsidian steam qbittorrent chromium ncdu discord;
+
+sudo pacman -S qutebrowser yt-dlp;
 
 flatpak install flathub com.github.d4nj1.tlpui org.localsend.localsend_app page.codeberg.JakobDev.jdMinecraftLauncher org.nickvision.tubeconverter net.nokyan.Resources info.febvre.Komikku;
 
@@ -51,15 +54,5 @@ yay -S ttf-ms-fonts visual-studio-code-bin newsflash;
 #git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting;
 # MODIFY into .zshrc file
 #plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
-
-## GITHUB-Section
-# INSERT your username and email and uncomment below lines.
-#username=""
-#email=""
-
-#git config --global user.name $username;
-#git config --global user.email $email;
-#git config --list;
 
 echo "Now reboot your system and after login, type 'Hyprland'";
