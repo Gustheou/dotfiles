@@ -39,7 +39,14 @@ local plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter", build= ":TSUpdate"
-  }
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+        require("lualine").setup()
+    end,
+  }, 
 }
 
 require("lazy").setup(plugins, opts)
@@ -52,7 +59,7 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 
 local config = require("nvim-treesitter.configs")
 config.setup({
-  ensure_installed = {"lua", "java", "haskell"},
+  ensure_installed = {"lua", "java", "markdown"},
   highlight = { enable = true },
   indent = { enable = true }
 })
