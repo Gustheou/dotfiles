@@ -11,7 +11,7 @@
 sudo pacman -Syu;
 
 # Hyprland essential packages
-sudo pacman -S wofi waybar pavucontrol brightnessctl hyprpaper hypridle hyprlock cliphist wl-clipboard hyprland xdg-desktop-portal xdg-desktop-portal-hyprland kitty thunar thunar-volman; #dolphin
+sudo pacman -S wofi waybar pavucontrol brightnessctl hyprpaper hypridle hyprlock cliphist wl-clipboard hyprland xdg-desktop-portal xdg-desktop-portal-hyprland kitty thunar thunar-volman tumbler; #dolphin
 
 # Fonts
 sudo pacman -S ttf-jetbrains-mono-nerd ttf-dejavu noto-fonts noto-fonts-emoji ttf-liberation;
