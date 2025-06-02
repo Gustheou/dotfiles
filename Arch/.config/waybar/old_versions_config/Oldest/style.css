@@ -73,9 +73,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: #373B41;
-    box-shadow: inset 0px -2px #F0C674;
-    color: white
+    background: @background-light;
+    box-shadow: inherit;
   }
 
 #workspaces button.urgent {
