@@ -39,8 +39,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "GohuFont 14 Nerd Font";
-    font-size: 14px;
+    font-family: "Hack Nerd Font";
+    font-size: 13px;
     min-height: 0;
 }
 
@@ -73,10 +73,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: #373B41;
-    /*box-shadow: inset 0px -2px #F0C674;*/
-    box-shadow: inset 0px -2px @blue;
-    color: white
+    background: @background-light;
+    box-shadow: inherit;
   }
 
 #workspaces button.urgent {
