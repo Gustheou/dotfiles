@@ -6,18 +6,17 @@
     "spacing": 5, // Gaps between modules (4px)
     "margin": 0,
     // Choose the order of the modules
-    "modules-left": [
-      "hyprland/workspaces", "hyprland/window"
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": [
+      "clock",
+      "network",
+      "bluetooth",
+      "custom/poweroff"
     ],
-    "modules-center": ["clock"],
     "modules-right": [
         "idle_inhibitor",
         "mpd",
         "pulseaudio",
-        "disk",
-        "network",
-//        "cpu",
-//        "memory",
         "backlight",
         "battery",
         "battery#bat2",
@@ -102,6 +101,7 @@
         // "icon-size": 21,
         "spacing": 10
     },
+  /*
     "clock": {
         "format": "{:%d - %H:%M} 󰥔",
         "format-alt": "{:%d-%m-%Y} 󰃮",
@@ -128,6 +128,13 @@
             "on-scroll-down": "shift_down"
         }
     },
+*/
+    "clock": {
+      "tooltip-format": "{calendar}",
+      "format-alt": "  {:%a, %d %b %Y}",
+      "format": "[ {:%d - %I:%M %p} ]"
+    },
+
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
@@ -145,25 +152,28 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon} |",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "󰛨  {percent}%",
+        "format-icons": ["󰃞","󰃟","󰃠","󰃝","󰃜","󰃛"],
     },
     "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 25,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon} |",
-        "format-full": "{capacity}% {icon} |",
-        "format-charging": "{capacity}%  |",
-        "format-plugged": "{capacity}%  |",
-        "format-alt": "{time} {icon} |",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
+      "format": "{icon}  {capacity}%",
+      "format-icons": {
+        "charging": [
+          "󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂅"
+        ],
+        "default": [
+          "󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"
+        ]
+      },
+      "format-full": "Charged ",
+      "interval": 5,
+      "states": {
+        "warning": 25,
+        "critical": 15
+      },
+    "tooltip": true
+    },    
+  "battery#bat2": {
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
@@ -178,15 +188,32 @@
       }
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%)   |",
-        "format-ethernet": "{ipaddr}/{cidr}  |",
-        "tooltip-format": "{ifname} via {gwaddr}  |",
-        "format-linked": "{ifname} (No IP)  |",
-        "format-disconnected": "Disconnected ⚠ |",
-        "format-alt": "{ifname}: {ipaddr}/{cidr} |"
+      "format-wifi": "{icon} {essid} ({signalStrength}%)",
+      "format-icons": ["[ 󰤯 ]", "[ 󰤟 ]", "[ 󰤢 ]", "[ 󰤥 ]", "[ 󰤨 ]"],
+      "format-ethernet": "󰀂",
+      //"format-alt": "󱛇",
+      "format-disconnected": "󰖪",
+      "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+      "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+
+      "format-linked": "[ {ifname} (No IP)  ]",
+      "format-disconnected": "[ Disconnected ⚠ ]",
+      "format-alt": "[ {ifname}: {ipaddr}/{cidr} ]",
+
+      "interval": 5,
+      "nospacing": 1
+    },    
+    "bluetooth": {
+      "format": "{icon}",
+      "format-icons": {
+        "enabled": "[  ]",
+        "disabled": "[ 󰂲 ]"
+      },
+      "on-click": "~/.config/waybar/scripts/bluetooth-toggle.sh",
+      "tooltip-format": "Bluetooth is {status}",
+      "interval": 5
     },
-    
+
      "disk": {
         "interval": 30,
         "format": "HDD:{percentage_used}% 󰋊 |",
@@ -199,7 +226,7 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "| {volume}% {icon} {format_source} |",
+        "format": "[ {volume}% {icon} {format_source} ]",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "| x {format_source} |",
@@ -231,20 +258,11 @@
     "custom/power": {
         "format" : "⏻ ",
         "on-click": "nwg-bar"
-      }
+      },
+    "custom/poweroff":{
+      "format": "[ 󰐥 ]",
+      "tooltip-format": "Shutdown the computer",
+      "on-click": "shutdown now"
     }
-
-    /*
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
-    }*/
+    }
 }

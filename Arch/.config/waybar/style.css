@@ -31,56 +31,66 @@
 @define-color backlight-color @yellow;
 @define-color disk-color #7dcfff;
 @define-color uptime-color @green;
-@define-color updates-color @orange;
-@define-color quote-color @green;
 @define-color idle-inhibitor-color @foreground;
 @define-color idle-inhibitor-active-color @red;
 
-* {
-    border: none;
-    border-radius: 0;
+waybar * {
+    border: 4px;
+    border-radius: 4px;
+    min-height: 0;
     font-family: "GohuFont 14 Nerd Font";
     font-size: 14px;
-    min-height: 0;
+}
+
+#waybar {
+  background-color: #3b4252;
+  border-radius: 2px;
+  opacity: 0.95;
 }
 
 window#waybar {
-    background: @background;
-    color: white;
+  background: #282c34;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  color: #9cdef2;
+  border: 3px solid #61afef;
+  border-left: 3px solid #56b6c2;
+  border-right: 3px solid #56b6c2;
 }
 
 #window {
     /* font-weight: bold; */
     font-family: "Hack";
 }
-/*
+
 #workspaces {
-    padding: 0 5px;
+  background-color: transparent;
+  padding-left: 10px;
 }
-*/
 
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: @workspaces-color;
-    margin: 0;
-}
-
-#workspaces button.focused {
-    box-shadow: inset 0 -2px @workspaces-focused-fg;
-    color: @workspaces-focused-fg;
-    font-weight: 900;
+  all: initial;
+  min-width: 0;
+  box-shadow: inherit;
+  border: 2px solid #61afef;
+  padding: 6px 6px;
+  margin: 6px 3px;
+  border-radius: 2px;
+  background-color: #2e3440;
+  color: #56b6c2;
 }
 
 #workspaces button.active {
-    background: #373B41;
-    /*box-shadow: inset 0px -2px #F0C674;*/
-    box-shadow: inset 0px -2px @blue;
-    color: white
-  }
+  color: #fab387;
+  background-color: #373B41;
+}
 
+#workspaces button:hover {
+  color: #2e3440;
+  background-color: #56b6c2;
+}
 #workspaces button.urgent {
-    background-color: @workspaces-urgent-bg;
+    background-color: #fc5757;
     color: @workspaces-urgent-fg;
 }
 
@@ -89,35 +99,73 @@ window#waybar {
     border-bottom-color: @mode-color;
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
-    padding: 0 3px;
-    margin: 0 2px;
+#clock, 
+#battery, 
+#cpu, 
+#memory, 
+#network, 
+#pulseaudio, 
+#mode, 
+#backlight, 
+#bluetooth, 
+#idle_inhibitor,
+#custom-poweroff,
+#tray {
+  padding: 6px 12px;
+  margin: 6px 6px;
+  background-color: #292d35;
+  border: 2px solid #61afef;
+  border-radius: 2px;
 }
 
 #clock {
-    color: @clock-color;
-    border-bottom-color: @clock-color;
+  font-weight: bold;
+  font-size: 12px;
+  color: @clock-color;
 }
 
-
 #battery {
+    font-weight: normal;
     color: @battery-color;
-    border-bottom-color: @battery-color;
 }
 
 #battery.charging, #battery.plugged {
     color: @battery-charging-color;
-    border-bottom-color: @battery-charging-color;
 }
 
 #battery.warning:not(.charging) {
-    color: @battery-warning-color;
-    border-bottom-color: @battery-warning-color;
+  background-color: #fab387;
+  color: #2e3440;
+  padding: 2px 6px;
+  border-radius: 6px;
 }
 
 #battery.critical:not(.charging) {
-    color: @battery-critical-color;
-    border-bottom-color: @battery-critical-color;
+  background-color: #bf616a;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#bluetooth.disabled {
+  color: #fab387;
+}
+
+#network.disconnected {
+  color: #1e1e2e;
+}
+
+#tray {
+  padding: 4px 8px;
+  background-color: #1e1e2e;
+}
+
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: @red;
+    border-bottom-color: @red;
 }
 
 
@@ -140,17 +188,14 @@ window#waybar {
 
 #pulseaudio {
     color: @pulseaudio-color;
-    border-bottom-color: @pulseaudio-color;
 }
 
 #pulseaudio.muted {
     color: @pulseaudio-muted-color;
-    border-bottom-color: @pulseaudio-muted-color;
 }
 
 #backlight {
     color: @backlight-color;
-    border-bottom-color: @backlight-color;
 }
 
 #disk {
@@ -158,29 +203,13 @@ window#waybar {
     border-bottom-color: @disk-color;
 }
 
-#custom-spotify {
-    color: rgb(102, 220, 105);
-}
-
-
 #custom-uptime {
     color: @uptime-color;
     border-bottom-color: @uptime-color;
 }
 
-#custom-updates {
-    color: @updates-color;
-    border-bottom-color: @updates-color;
-}
-
-#custom-quote {
-    color: @quote-color;
-    border-bottom-color: @quote-color;
-}
-
 #idle_inhibitor {
     color: @idle-inhibitor-color;
-    border-bottom-color: transparent;
 }
 
 #idle_inhibitor.activated {
@@ -188,15 +217,32 @@ window#waybar {
     border-bottom-color: @idle-inhibitor-active-color;
 }
 
-#tray {
-    background-color: transparent;
-    padding: 0 10px;
-    margin: 0 2px;
+
+
+#clock:hover, 
+#battery:hover, 
+#cpu:hover, 
+#memory:hover, 
+#network:hover, 
+#pulseaudio:hover, 
+#mode:hover, 
+#backlight:hover, 
+#bluetooth:hover,
+#custom-poweroff:hover,
+#tray:hover {
+  background-color: #4c566a;
+  border: 2px solid #56b6c2;
+  color: #56b6c2;
+  transition: all 0.2s ease-in-out;
 }
 
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    color: @red;
-    border-bottom-color: @red;
+tooltip {
+  color: #56b6c2;
+  background-color: #3b4252;
+  border: 1px solid #56b6c2;
+  font-weight: bold;
 }
 
+tooltip label {
+  color: #78bec7;
+}
