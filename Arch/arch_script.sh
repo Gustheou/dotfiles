@@ -11,7 +11,7 @@
 sudo pacman -Syu;
 
 # Hyprland essential packages
-sudo pacman -S wofi waybar pavucontrol brightnessctl hyprpaper hypridle hyprlock hyprpolkitagent cliphist wl-clipboard hyprland xdg-desktop-portal xdg-desktop-portal-hyprland kitty thunar thunar-volman tumbler; #dolphin
+sudo pacman -S wofi waybar pavucontrol brightnessctl hyprpaper hypridle hyprlock hyprpolkitagent hyprsunset cliphist wl-clipboard hyprland xdg-desktop-portal xdg-desktop-portal-hyprland kitty thunar thunar-volman tumbler; #dolphin
 
 # Fonts
 sudo pacman -S ttf-jetbrains-mono-nerd ttf-dejavu noto-fonts noto-fonts-emoji ttf-liberation;
@@ -20,11 +20,9 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-dejavu noto-fonts noto-fonts-emoji tt
 sudo pacman -S fastfetch flatpak firefox dunst man grim slurp ufw tlp gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer kvantum kvantum-qt5 qt5ct qt6ct nwg-look archlinux-xdg-menu feh okular galculator blueman bluez bluez-utils ldns yazi bat github-cli libreoffice gnome-disk-utility mpv zip unzip p7zip unrar tar gzip keepassxc obsidian steam qbittorrent chromium ncdu discord;
 
 #Alternatives
-# sudo pacman -S polkit-kde-agent ristretto;
+# sudo pacman -S polkit-kde-agent ristretto qutebrowser yt-dlp;
 
-sudo pacman -S qutebrowser yt-dlp;
-
-flatpak install flathub com.github.d4nj1.tlpui org.localsend.localsend_app page.codeberg.JakobDev.jdMinecraftLauncher org.nickvision.tubeconverter net.nokyan.Resources info.febvre.Komikku;
+flatpak install flathub com.github.d4nj1.tlpui org.localsend.localsend_app page.codeberg.JakobDev.jdMinecraftLauncher org.nickvision.tubeconverter io.missioncenter.MissionCenter info.febvre.Komikku net.ankiweb.Anki com.usebottles.bottles;
 
 
 # Enable bluetooth service
