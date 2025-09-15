@@ -130,7 +130,7 @@
     },
 */
     "clock": {
-      "tooltip-format": "{calendar}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "format-alt": "  {:%a, %d %b %Y}",
       "format": "[ {:%d - %I:%M %p} ]"
     },
