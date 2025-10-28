@@ -11,8 +11,9 @@ PS1='[\u@\h \W]\$ '
 
 alias ll='ls -l'
 alias y='yazi'
-alias wifi-list='nmcli device wifi list'
-alias wifi-connect='nmcli device wifi connect'
+alias vim='nvim'
+alias rm='rm -Iv'
+
 export EDITOR=nvim
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0
 #export JAVA_HOME=$HOME/.jdks/corretto-11.0.28
