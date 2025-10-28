@@ -11,7 +11,7 @@
 sudo pacman -Syu;
 
 # i3
-sudo pacman -S i3 dmenu lightdm lightdm-gtk-greeter xdg-desktop-portal xdg-desktop-portal-gtk tumbler ffmpegthumbnailer flameshot brightnessctl kitty pcmanfm xarchiver;
+sudo pacman -S i3 dmenu lightdm lightdm-gtk-greeter xdg-desktop-portal xdg-desktop-portal-gtk tumbler ffmpegthumbnailer flameshot brightnessctl kitty pcmanfm xarchiver gvfs;
 #thunar thunar-archive-plugin thunar-volman fileroller
 sudo pacman -S xed firefox flatpak dunst man ufw gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer archlinux-xdg-menu feh okular galculator blueman bluez bluez-utils network-manager-applet ldns yazi github-cli libreoffice gnome-disk-utility mpv zip unzip p7zip unrar tar gzip keepassxc obsidian steam qbittorrent chromium ncdu discord;
 
