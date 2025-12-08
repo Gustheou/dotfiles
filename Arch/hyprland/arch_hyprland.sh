@@ -17,7 +17,7 @@ sudo pacman -S wofi waybar pavucontrol brightnessctl hyprpaper hypridle hyprlock
 sudo pacman -S ttf-jetbrains-mono-nerd ttf-dejavu noto-fonts noto-fonts-emoji ttf-liberation;
 
 # Essentials packages (for me)
-sudo pacman -S fastfetch flatpak firefox dunst man grim slurp ufw tlp gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer kvantum kvantum-qt5 qt5ct qt6ct nwg-look archlinux-xdg-menu feh okular galculator blueman bluez bluez-utils ldns yazi bat github-cli libreoffice gnome-disk-utility mpv zip unzip p7zip unrar tar gzip keepassxc obsidian steam qbittorrent chromium ncdu discord;
+sudo pacman -S fastfetch flatpak firefox dunst man grim slurp ufw tlp gst-libav gst-plugins-bad gst-plugins-good gst-plugins-ugly ffmpeg gstreamer qt5ct qt6ct archlinux-xdg-menu feh okular galculator blueman bluez bluez-utils ldns yazi github-cli libreoffice gnome-disk-utility mpv zip unzip p7zip unrar tar gzip keepassxc obsidian steam qbittorrent chromium ncdu discord gvfs;
 
 #Alternatives
 # sudo pacman -S polkit-kde-agent ristretto qutebrowser yt-dlp;
@@ -44,7 +44,7 @@ cd yay;
 makepkg -si;
 cd ..;
 
-yay -S ttf-ms-fonts visual-studio-code-bin newsflash;
+yay -S ttf-ms-fonts visual-studio-code-bin;
 
 ## ZSH-Section
 #sudo pacman -S zsh
