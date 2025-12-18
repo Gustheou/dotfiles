@@ -1,0 +1,242 @@
+@define-color background #2b3339;
+@define-color background-light #323c41;
+@define-color foreground #d3c6aa;
+@define-color black #15161e;
+@define-color red #f7768e;
+@define-color green #9ece6a;
+@define-color yellow #e0af68;
+@define-color blue #7aa2f7;
+@define-color magenta #bb9af7;
+@define-color cyan #7dcfff;
+@define-color white #a9b1d6;
+@define-color orange #ff9e64;
+
+@define-color mode-color @orange;
+@define-color mpd-color @magenta;
+@define-color weather-color @magenta;
+@define-color playerctl-color @magenta;
+@define-color clock-color @blue;
+@define-color cpu-color @green;
+@define-color memory-color @magenta;
+@define-color temperature-color @yellow;
+@define-color temperature-critical-color @red;
+@define-color battery-color @cyan;
+@define-color battery-charging-color @green;
+@define-color battery-warning-color @yellow;
+@define-color battery-critical-color @red;
+@define-color network-color @blue;
+@define-color network-disconnected-color @red;
+@define-color pulseaudio-color @orange;
+@define-color pulseaudio-muted-color @red;
+@define-color backlight-color @yellow;
+@define-color disk-color #7dcfff;
+@define-color uptime-color @green;
+@define-color idle-inhibitor-color @foreground;
+@define-color idle-inhibitor-active-color @red;
+
+waybar * {
+    border: 4px;
+    border-radius: 4px;
+    min-height: 0;
+    font-family: "Hack Nerd Font";
+    font-size: 11px;
+}
+
+#waybar {
+  background-color: #3b4252;
+  border-radius: 2px;
+  opacity: 0.95;
+}
+
+window#waybar {
+  background: transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  color: #9cdef2;
+}
+
+#window {
+    /* font-weight: bold; */
+    font-family: "Hack Nerd Font";
+}
+
+#workspaces {
+  background-color: transparent;
+  padding-left: 10px;
+}
+
+#workspaces button {
+  all: initial;
+  min-width: 0;
+  box-shadow: inherit;
+  border: 2px solid #61afef;
+  padding: 6px 6px;
+  margin: 6px 3px;
+  border-radius: 2px;
+  background-color: #2e3440;
+  color: #56b6c2;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+  background-color: #373B41;
+}
+
+#workspaces button:hover {
+  color: #2e3440;
+  background-color: #56b6c2;
+}
+#workspaces button.urgent {
+    background-color: #fc5757;
+    color: @workspaces-urgent-fg;
+}
+
+#mode {
+    color: @mode-color;
+    border-bottom-color: @mode-color;
+}
+
+#clock, 
+#battery, 
+#cpu, 
+#memory, 
+#network, 
+#pulseaudio, 
+#mode, 
+#backlight, 
+#bluetooth, 
+#idle_inhibitor,
+#custom-poweroff,
+#tray {
+  padding: 6px 12px;
+  margin: 6px 6px;
+  background-color: #292d35;
+  border: 2px solid #61afef;
+  border-radius: 2px;
+}
+
+#clock {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#battery {
+    font-weight: normal;
+    color: @battery-color;
+}
+
+#battery.charging, #battery.plugged {
+    color: @battery-charging-color;
+}
+
+#battery.warning:not(.charging) {
+  background-color: #fab387;
+  color: #2e3440;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #bf616a;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#bluetooth.disabled {
+  color: #fab387;
+}
+
+#network.disconnected {
+  color: #1e1e2e;
+}
+
+#tray {
+  padding: 4px 8px;
+  background-color: #1e1e2e;
+}
+
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: @red;
+    border-bottom-color: @red;
+}
+
+
+#cpu {
+}
+
+#memory {
+}
+
+#network {
+}
+
+#network.disconnected {
+    color: @network-disconnected-color;
+    border-bottom-color: @network-disconnected-color;
+}
+
+
+#pulseaudio {
+    color: @pulseaudio-color;
+}
+
+#pulseaudio.muted {
+    color: @pulseaudio-muted-color;
+}
+
+#backlight {
+    color: @backlight-color;
+}
+
+#disk {
+    color: @disk-color;
+    border-bottom-color: @disk-color;
+}
+
+#custom-uptime {
+    color: @uptime-color;
+    border-bottom-color: @uptime-color;
+}
+
+#idle_inhibitor {
+    color: @idle-inhibitor-color;
+}
+
+#idle_inhibitor.activated {
+    color: @idle-inhibitor-active-color;
+    border-bottom-color: @idle-inhibitor-active-color;
+}
+
+
+
+#clock:hover, 
+#battery:hover, 
+#cpu:hover, 
+#memory:hover, 
+#network:hover, 
+#pulseaudio:hover, 
+#mode:hover, 
+#backlight:hover, 
+#bluetooth:hover,
+#custom-poweroff:hover,
+#tray:hover {
+  background-color: #4c566a;
+  border: 2px solid #56b6c2;
+  color: #56b6c2;
+  transition: all 0.2s ease-in-out;
+}
+
+tooltip {
+  color: #56b6c2;
+  background-color: #3b4252;
+  border: 1px solid #56b6c2;
+  font-weight: bold;
+}
+
+tooltip label {
+  color: #78bec7;
+}
