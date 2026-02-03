@@ -12,11 +12,4 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting;
 #plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-username="Gustheou"
-email="gustavopn117@gmail.com"
-
-git config --global user.name $username;
-git config --global user.email $email;
-git config --list;
-
-flatpak install flathub com.valvesoftware.Steam flathub org.qbittorrent.qBittorrent flathub com.discordapp.Discord flathub org.gnome.Calculator flathub org.nickvision.tubeconverter flathub md.obsidian.Obsidian flathub com.obsproject.Studio flathub net.ankiweb.Anki flathub org.gnome.Loupe flathub net.nokyan.Resources flathub org.keepassxc.KeePassXC flathub org.gnome.baobab flathub page.codeberg.JakobDev.jdMinecraftLauncher
+flatpak install flathub com.valvesoftware.Steam org.qbittorrent.qBittorrent com.discordapp.Discord org.gnome.Calculator org.nickvision.tubeconverter md.obsidian.Obsidian com.obsproject.Studio net.ankiweb.Anki org.gnome.Loupe net.nokyan.Resources org.keepassxc.KeePassXC org.gnome.baobab page.codeberg.JakobDev.jdMinecraftLauncher org.localsend.localsend_app
