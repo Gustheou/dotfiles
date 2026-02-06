@@ -11,7 +11,7 @@
 sudo pacman -Syu;
 
 # Hyprland essential packages
-sudo pacman -S wofi waybar pavucontrol brightnessctl hyprpaper hypridle hyprlock hyprpolkitagent hyprsunset cliphist wl-clipboard hyprland xdg-desktop-portal xdg-desktop-portal-hyprland kitty pcmanfm tumbler; #dolphin
+sudo pacman -S wofi waybar pavucontrol brightnessctl hyprpaper hypridle hyprlock hyprpolkitagent hyprsunset cliphist wl-clipboard hyprland xdg-desktop-portal xdg-desktop-portal-hyprland kitty pcmanfm tumbler ly; #dolphin
 
 # Fonts
 sudo pacman -S ttf-jetbrains-mono-nerd ttf-dejavu noto-fonts noto-fonts-emoji ttf-liberation;
@@ -37,6 +37,9 @@ sudo pacman -S intel-ucode;
 # Enable firewall
 sudo systemctl enable --now ufw.service;
 
+# Enable greeting
+sudo systemctl enable ly@tty1.service
+
 # AUR Repository (YAY)
 cd $HOME/;
 git clone https://aur.archlinux.org/yay.git;
@@ -45,15 +48,5 @@ makepkg -si;
 cd ..;
 
 yay -S ttf-ms-fonts visual-studio-code-bin;
-
-## ZSH-Section
-#sudo pacman -S zsh
-# OhMyZShell installer
-#sh -c "$(curl -fsSL https://install.ohmyz.sh/)";
-  # Plugins for ZShell
-#git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
-#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting;
-# MODIFY into .zshrc file
-#plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 echo "Now reboot your system and after login, type 'Hyprland'";
