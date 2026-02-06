@@ -34,12 +34,12 @@
 @define-color idle-inhibitor-color @foreground;
 @define-color idle-inhibitor-active-color @red;
 
-waybar * {
+* {
     border: 4px;
     border-radius: 4px;
     min-height: 0;
-    font-family: "GohuFont 14 Nerd Font";
-    font-size: 14px;
+    font-family: "Hack Nerd Font";
+    font-size: 13px;
 }
 
 #waybar {
@@ -49,18 +49,15 @@ waybar * {
 }
 
 window#waybar {
-  background: #282c34;
+  background: transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
   color: #9cdef2;
-  border: 3px solid #61afef;
-  border-left: 3px solid #56b6c2;
-  border-right: 3px solid #56b6c2;
 }
 
 #window {
     /* font-weight: bold; */
-    font-family: "Hack";
+    font-family: "Hack Nerd Font";
 }
 
 #workspaces {
@@ -81,7 +78,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: #fab387;
+  color: #ffffff;
   background-color: #373B41;
 }
 
@@ -121,7 +118,6 @@ window#waybar {
 #clock {
   font-weight: bold;
   font-size: 12px;
-  color: @clock-color;
 }
 
 #battery {
@@ -176,8 +172,6 @@ window#waybar {
 }
 
 #network {
-    color: @network-color;
-    border-bottom-color: @network-color;
 }
 
 #network.disconnected {
