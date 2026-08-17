@@ -48,8 +48,8 @@ floating_modifier $mod
 #tiling_drag modifier titlebar
 
 # start a terminal
-#bindsym $mod+Return exec kitty
-bindsym $mod+Return exec st
+bindsym $mod+Return exec kitty
+#bindsym $mod+Return exec st
 bindsym $mod+b exec firefox
 
 #tab between workspaces
@@ -208,11 +208,11 @@ for_window [class="^.*"] border pixel 2
 gaps inner 7
 gaps outer 2
 
-exec_always feh --bg-scale /home/athena/.config/i3/wallpaper.png
+exec_always feh --bg-scale $HOME/.config/i3/wallpaper.png
 
 # autolock
 exec --no-startup-id xautolock -corners -000 -time 10 -locker 'i3lock -c 000000' &
-bindsym Shift+$mod+Pause exec i3lock -c 000000 && systemctl suspend
-bindsym $mod+Pause exec i3lock -c 000000 
+bindsym Shift+$mod+End exec i3lock -c 000000 && systemctl suspend
+bindsym $mod+End exec i3lock -c 000000 
 
 #exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:nocaps"
